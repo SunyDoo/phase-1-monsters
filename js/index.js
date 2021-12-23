@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function getAllMonsters(page){
         fetch (`http://localhost:3000/monsters/?_limit=50&_page=${page}`)
         .then (res=>res.json())
-        // .then (mons=>mons.forEach(addMonster(item)))
+// .then (mons=>mons.forEach(addMonster(item)))
         .then (monsData=>{
             clearScreen()
             monsData.forEach(mon=>addMonster(mon))
